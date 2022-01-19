@@ -1,0 +1,39 @@
+<form class="card" [formGroup]="form" (ngSubmit)="submit()">
+  <h2>Войти в панель администратора</h2>
+
+  <div
+    class="form-control"
+    [ngClass]="{invalid:form.get('email').touched && form.get('email').invalid}"
+  >
+    <label for="email">Email</label>
+    <input id="email" type="email">
+    <div
+      class="validation"
+      *ngIf="form.get('email').touched && form.get('email').invalid"
+    >
+      <small *ngIf="form.get('email').errors.required">Введите поле email</small>
+      <small *ngIf="form.get('email').errors.email">Введите корректный email</small>
+    </div>
+  </div>
+
+  <div
+    class="form-control"
+    [ngClass]="{invalid:form.get('password').touched && form.get('password').invalid}"
+  >
+    <label for="password">Password</label>
+    <input id="password" type="password">
+    <div
+      class="validation"
+      *ngIf="form.get('password').touched && form.get('password').invalid"
+    >
+      <small>error</small>
+    </div>
+  </div>
+
+  <button
+    class="btn btn-primary"
+    type="submit"
+    [disabled]="form.invalid"
+  >Войти
+  </button>
+</form>
