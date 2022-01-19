@@ -1,27 +1,56 @@
 # AngularBlogTest
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.10.
+Тестовый блог на Angular
 
-## Development server
+### Languages and Tools
+![Angular](https://img.shields.io/badge/-Angular-090909?style=for-the-badge&logo=Angular)
+![HTML](https://img.shields.io/badge/-HTML5-090909?style=for-the-badge&logo=HTML5)
+![CSS](https://img.shields.io/badge/-CSS-090909?style=for-the-badge&logo=CSS3)
+![JavaScript](https://img.shields.io/badge/-JS-090909?style=for-the-badge&logo=JavaScript)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Themes
+<ol>
+<li>Что такое Angular</li>
+<li>Установка</li>
+<li>Создание компонентов</li>
+<li>Генерация компонентов</li>
+</ol>
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 1. Что такое Angular
+Angular - js библиотека, которая в ядре использует RXJS и TypeScript, служит для разработки сложных сайтов
 
-## Build
+https://angular.io/docs - документация
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 2. Установка
 
-## Running unit tests
+<ol>
+<li>Нужен node JS</li>
+<li>npm install -g @angular/cli - установка Angular</li>
+<li>ng new ng-basics - для генерации нового проекта нужно зайти в папку проекта  
+<ol>
+<li>Хотим ли добавить роутинг для проекта?</li>
+<li>Какой стиль использовать? Выбираю scss</li>
+<li>Происходит генерация проекта. В корне создается файл package.json, в котором прописаны все зависимости</li>
+</ol>
+</li>
+<li>npm start - запуск приложения</li>
+</ol>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 3. Создание компонентов
+<ol>
+<li>Создать в папке app папку. В ней создать файл .ts</li>
+</ol>
 
-## Running end-to-end tests
+## 4. Генерация компонентов
+ng g c form --skipTests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+--skipTests - не генерировать тесты
+form - название компонента
+c - сгенерировать компонент
+g - сгенерировать
 
-## Further help
+Метод bindings - служит для связки шаблона и компонента
+Для байндинга атрибут нужно обернуть в квадратные скобки
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Ивент байндинг - принимает пользовательские действия и дает команду самому компоненту
