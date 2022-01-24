@@ -11,7 +11,7 @@ export class AdminLayoutComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private auth: AuthService,
+    public auth: AuthService,//публичный, чтобы можно было работать в шаблоне, т.к. после сборки проекта на продакшн могут возникнуть ошибки
   ) {
   }
 
