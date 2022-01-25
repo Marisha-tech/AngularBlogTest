@@ -52,4 +52,10 @@ export class PostsService {
   remove(id: string): Observable<void> {
     return this.http.delete<void>(`${environment.fbDbUrl}/posts/${id}.json`)
   }
+
+  //обновление поста
+  update(post: Post): Observable<Post> {
+    //patch - позволяет частично обновлять данные
+    return this.http.patch<Post>(`${environment.fbDbUrl}/posts/${post.id}.json`, {post})
+  }
 }
