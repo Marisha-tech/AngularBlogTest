@@ -13,6 +13,8 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 export class EditePageComponent implements OnInit {
 
   form: FormGroup | any
+  post: Post | any //для хранения id поста
+  submitted = false //флаг для обновления формы
 
   constructor(
     private route: ActivatedRoute,
@@ -28,6 +30,7 @@ export class EditePageComponent implements OnInit {
         switchMap((params: Params) => {
           return this.postService.getById(params['id'])
         })).subscribe((post: Post) => {
+          this.post = post
           this.form = new FormGroup({
             title: new FormControl(post.title, Validators.required),
             text: new FormControl(post.text, Validators.required),
@@ -37,12 +40,21 @@ export class EditePageComponent implements OnInit {
       //выполнить запрос к БД, чтобы получить отдельный пост
       //получили params[id]
       //после того, как получили params[id] его нужно передать в новый стрим
-
-
-
   }
 
   submit() {
+    if (this.form.invalid) {
+      return
+    }
 
+    this.submitted = true
+
+    this.postService.update({
+      ...this.post,
+      title: this.form.value.title,
+      text: this.form.value.text,
+    }).subscribe(() => {
+      this.submitted = false
+    })
   }
 }
