@@ -11,6 +11,7 @@ import {EditePageComponent} from './edite-page/edite-page.component';
 import {AuthService} from "./shared/services/auth.service"; //зарегистрирован в главном модуле, т.к. необходим для использования в нескольких местах
 import {SharedModule} from "./shared/shared.module";
 import {AuthGuard} from "./shared/services/auth.guard";
+import {SearchPipe} from "./shared/search.pipe";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {AuthGuard} from "./shared/services/auth.guard";
     LoginPageComponent,
     DashboardPageComponent,
     CreatePageComponent,
-    EditePageComponent
+    EditePageComponent,
+    SearchPipe,
   ],
   imports: [
     CommonModule,
