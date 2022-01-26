@@ -13,6 +13,7 @@ import {SharedModule} from "../shared/shared.module";
 import {AuthGuard} from "./shared/services/auth.guard";
 import {SearchPipe} from "./shared/search.pipe";
 import { AlertComponent } from './shared/components/alert/alert.component';
+import {AlertService} from "./shared/services/alert.service";
 
 @NgModule({
   declarations: [
@@ -42,7 +43,7 @@ import { AlertComponent } from './shared/components/alert/alert.component';
     ])
   ],
   exports: [RouterModule],
-  providers: [ AuthGuard],
+  providers: [AuthGuard, AlertService],//providers - использование в рамках админки
 })
 
 export class AdminModule {
