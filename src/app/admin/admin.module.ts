@@ -9,9 +9,10 @@ import {DashboardPageComponent} from './dashboard-page/dashboard-page.component'
 import {CreatePageComponent} from './create-page/create-page.component';
 import {EditePageComponent} from './edite-page/edite-page.component';
 import {AuthService} from "./shared/services/auth.service"; //зарегистрирован в главном модуле, т.к. необходим для использования в нескольких местах
-import {SharedModule} from "./shared/shared.module";
+import {SharedModule} from "../shared/shared.module";
 import {AuthGuard} from "./shared/services/auth.guard";
 import {SearchPipe} from "./shared/search.pipe";
+import { AlertComponent } from './shared/components/alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import {SearchPipe} from "./shared/search.pipe";
     CreatePageComponent,
     EditePageComponent,
     SearchPipe,
+    AlertComponent,
   ],
   imports: [
     CommonModule,
@@ -46,3 +48,4 @@ import {SearchPipe} from "./shared/search.pipe";
 export class AdminModule {
 
 }
+
