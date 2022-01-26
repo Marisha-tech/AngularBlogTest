@@ -103,16 +103,19 @@ g - сгенерировать
 <li>Установить http-server<br>
 <code>npm install -g http-server</code>
 </li>
-<li>Перейти в папку dist <code>cd dist/</code>. Перейти в папку AngularBlogTest <code>cd AngularBlogTest/</code> В папке проекта запустить проект
-<code>http-server -p 4200</code>
+<li>
+<p>Перейти в папку dist <code>cd dist/</code>.</p>
+<p>Перейти в папку AngularBlogTest <code>cd AngularBlogTest/</code></p>
+<p>В папке проекта запустить проект <code>http-server -p 4200</code></p>
 </li>
-<li>В консоли перейти по доступному адресу (например  http://127.0.0.1:4200). В строке браузера добавить /index.html</li>
+<li>В консоли перейти по доступному адресу (например  http://127.0.0.1:4200).
+<p>В строке браузера добавить /index.html</p>
+</li>
 <li>В консоли Application -> Service Worker видим зарегистрированный Service Worker (Source ngsw-worker.js)</li>
 <li>В Cache Storage можно увидеть закэшированные посты, значит Service Worker работает и приложение запускается быстрее, т.к. данные берутся из кэша</li>
-<li></li>
 </ol>
 
-##Деплой приложения
+## Деплой приложения
 <ol>
 <li>Зайти в firebase -> hoisting -> начать</li>
 <li>Установить firebase-tools<br>
