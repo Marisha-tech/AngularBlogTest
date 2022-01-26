@@ -56,6 +56,6 @@ export class PostsService {
   //обновление поста
   update(post: Post): Observable<Post> {
     //patch - позволяет частично обновлять данные
-    return this.http.patch<Post>(`${environment.fbDbUrl}/posts/${post.id}.json`, {post})
+    return this.http.patch<Post>(`${environment.fbDbUrl}/posts/${post.id}.json`, post)
   }
 }
