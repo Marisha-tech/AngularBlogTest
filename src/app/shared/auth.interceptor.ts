@@ -24,6 +24,7 @@ export class AuthInterceptor implements HttpInterceptor {
     return next.handle(req)
 
       .pipe(
+        //для отладки
         tap(() => {
           console.log('Intercept')
         }),
