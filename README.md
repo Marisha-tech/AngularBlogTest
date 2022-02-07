@@ -12,7 +12,7 @@
 ### Languages and Tools
 ![Angular](https://img.shields.io/badge/-Angular-090909?style=for-the-badge&logo=Angular)
 ![HTML](https://img.shields.io/badge/-HTML5-090909?style=for-the-badge&logo=HTML5)
-![CSS](https://img.shields.io/badge/-CSS-090909?style=for-the-badge&logo=CSS3)
+![SCSS](https://img.shields.io/badge/-SCSS-090909?style=for-the-badge&logo=SCSS)
 ![TypeScript](https://img.shields.io/badge/-TypeScript-090909?style=for-the-badge&logo=TypeScript)
 
 ### Themes
