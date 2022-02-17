@@ -6,9 +6,6 @@
 
 Админка: https://angularblogtest-1b8f2.web.app/admin
 
-Логин: admin@mail.ru
-Пароль: 123456
-
 ### Languages and Tools
 ![Angular](https://img.shields.io/badge/-Angular-090909?style=for-the-badge&logo=Angular)
 ![HTML](https://img.shields.io/badge/-HTML5-090909?style=for-the-badge&logo=HTML5)
